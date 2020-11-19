@@ -50,5 +50,23 @@ public class ChampollionJUnitTest {
                          "L'enseignant doit maintenant avoir 30 heures prévues pour l'UE 'uml'");		
 		
 	}
+	@Test
+	public void testHeuresPrevuesUe(){
+		// 10h TD 3 CM 4 1P pour UML
+		untel.ajouteEnseignement(uml, 3, 10, 4);
+		assertEquals(17, untel.heuresPrevuesPourUE(uml),
+				"L'enseignant doit maintenant avoir 18 heures prévues pour l'UE 'uml'");
+
+	}
+
+	@Test
+	public void testHeuresPrevue(){
+		// 10h TD 3 CM 4 1P pour UML
+		untel.ajouteEnseignement(uml, 3, 10, 4);
+		untel.ajouteEnseignement(java, 3, 10, 4);
+		assertEquals(34, untel.heuresPrevues(),
+				"L'enseignant doit maintenant avoir 18 heures prévues pour l'UE 'uml'");
+
+	}
 	
 }

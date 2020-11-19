@@ -47,6 +47,9 @@ public class Enseignant extends Personne {
                 equivalTD += service.getVolumeTD();
                 equivalTD += 0.75 * service.getVolumeTP();
             }
+            else{
+                System.out.println("Pas enseignant de l'UE");
+            }
         }
         return Math.round(equivalTD);
     }
