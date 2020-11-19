@@ -68,5 +68,17 @@ public class ChampollionJUnitTest {
 				"L'enseignant doit maintenant avoir 18 heures prévues pour l'UE 'uml'");
 
 	}
-	
+	@Test
+	public void testSousServiceT(){
+		untel.ajouteEnseignement(uml, 3, 10, 4);
+		untel.ajouteEnseignement(java, 3, 10, 4);
+		assertTrue(untel.enSousService(),"doit renvoyer vraie");
+	}
+
+	@Test
+	public void testSousServiceF(){
+		untel.ajouteEnseignement(uml, 150, 10, 4);
+		untel.ajouteEnseignement(java, 3, 10, 4);
+		assertFalse(untel.enSousService(),"doit renvoyer Faux");
+	}
 }

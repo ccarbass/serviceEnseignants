@@ -47,9 +47,6 @@ public class Enseignant extends Personne {
                 equivalTD += service.getVolumeTD();
                 equivalTD += 0.75 * service.getVolumeTP();
             }
-            else{
-                System.out.println("Pas enseignant de l'UE");
-            }
         }
         return Math.round(equivalTD);
     }
@@ -67,6 +64,14 @@ public class Enseignant extends Personne {
         ServicePrevu s = new ServicePrevu(ue,volumeCM,volumeTD,volumeTP,e);
         prevu.add(s);
 
+    }
+    public boolean enSousService(){
+        if(this.heuresPrevues()<=192){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
 }
