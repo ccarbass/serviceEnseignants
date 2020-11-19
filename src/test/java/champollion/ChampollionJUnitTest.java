@@ -23,8 +23,8 @@ public class ChampollionJUnitTest {
 		B103= new Salle("B103",22);
 		D1= new Date(2020, 10, 15);
 		D2= new Date(2020, 10, 16);
-		I1 = new Intervention(B102,uml,untel,D1,2);
-		I2 = new Intervention(B102,java,untel,D2,2);
+		I1 = new Intervention(B102,uml,untel,D1,2,TypeIntervention.CM);
+		I2 = new Intervention(B102,java,untel,D2,2,TypeIntervention.TP);
 
 	}
 	

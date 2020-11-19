@@ -9,14 +9,16 @@ public class Intervention {
     private Salle s;
     private  UE u;
     private Enseignant e;
+    private TypeIntervention type;
 
-    public Intervention(Salle s, UE ue, Enseignant e, Date deb, int duree){
+    public Intervention(Salle s, UE ue, Enseignant e, Date deb, int duree,TypeIntervention type){
         this.s=s;
         this.u=ue;
         this.e=e;
         this.debut=deb;
         this.duree=duree;
         this.annulee=false;
+        this.type=type;
 
     }
 
